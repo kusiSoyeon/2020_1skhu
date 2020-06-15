@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html style="background-color: rgb(255,251,244);">
+
+<head>
+
+ <title> 카페 </title>
+
+ <style>
+
+    html, body { margin: 0; padding: 0; height: 100%; }
+        .nav { width: 20%; height: 100%; float: left;}
+        .header { width: 80%; height: 30%; float:right; }
+        .section { width: 80%; height: 70%; float: right;}
+   body/*배경*/
+    {
+        border: 1.6em solid #E8DAB3;
+        border-radius: 50px;
+        background-image: url("media/줄공책바탕.jpg");
+     }
+
+     #shadow { box-shadow: 0px 0px 2px black; }
+     header div div
+     {
+       display: inline-block;
+       background-color: white;
+       margin: 2.2%;
+       width: 16%; height: 24%;
+       position: absolute;
+       text-align: center;
+       font-family: "MD이솝체", monospace;
+       font-size:1.2em;
+       color: black;
+       text-shadow: 1px 1px 2px rgb(48,43,0), 0px 0px 3px rgb(173,101,0);
+      
+     }
+
+     h5
+     {
+        text-align: center;
+        font-family: "MD이솝체", monospace;
+        font-size : 0.7em;
+        color: rgb(255,251,244);
+        text-shadow: 1px 1px 2px rgb(48,43,0), 0px 0px 3px rgb(173,101,0);
+     }
+
+     .div_top
+     {
+       display: inline-block;
+       background-color: rgb(255,251,244);
+       box-shadow: 0px 0px 1px black;
+       border: 1px dotted rgb(255, 249, 229);
+       width: 80%; height: 50%;
+       position: relative;
+       top: 15%;  
+     }
+
+     .div_bottom
+     {
+       display: inline-block;
+       width: 80%; height: 15%;
+       position: relative;
+       top: 20%;
+
+     }
+
+     /*카테고리 부분*/
+    nav div div
+     {
+        display: inline-block;
+        background: #E8DAB3;
+       border-radius: 50px;
+       border: 10px ridge rgb(255,251,244);
+       margin: 1%;
+       width: 16.5%; height: 10%;
+       position: absolute;
+       text-align: center;
+       font-family: "MD이솝체", monospace;
+       font-size:1.2em;
+       color: black;
+       text-shadow: 1px 1px 2px rgb(48,43,0), 0px 0px 3px rgb(173,101,0);
+     }
+
+       a:link
+        {
+            color: rgb(255,251,244);
+            text-shadow: 1px 1px black;
+            font: bold 1em "MD이솝체", monospace;
+            text-decoration: none;
+        }
+       a:hover
+        {
+            text-shadow: 0px 0px 5px black;
+            font: bold 1em "MD이솝체", monospace; 
+            text-decoration: underline;
+        }
+        a:visited
+        {
+            color: rgb(255,251,244);
+            text-shadow: 0px 0px 5px black;
+            font: bold 1em "MD이솝체", monospace; 
+            text-decoration: none;
+        }
+
+        .scroll
+        {
+            width: 93%; height: 90%;
+            margin: 2%;
+            border: 2px solid lightgray;
+            font: bold 1em monospace; 
+            overflow: scroll;
+        }
+
+        section p
+        {
+            margin: 4%;
+        }
+
+ </style>
+
+ <script>
+
+    function work_time() {
+    var h5 = document.getElementById("work_time");
+    h5.innerHTML="<br>한달 근무시간";
+    }
+
+    function money() {
+    var h5 = document.getElementById("money");
+    h5.innerHTML="<br>월급";
+    }
+
+    function employee() {
+    var h5 = document.getElementById("employee");
+    h5.innerHTML="<br>근무자수";
+    }
+
+
+ </script>
+
+</head>
+
+
+<body>
+
+        <header class="header">
+            
+            <div style="width: 100%; height: 100%;">
+
+                <div id="shadow" style="top: 2.2%; bottom: 2.2%; left:21%;">
+                    <image class="div_top" src="media/카페.png"></image>
+                    <div class="div_bottom">카페</div>
+                </div>
+
+                <div id="shadow" style="top: 2.2%; bottom: 2.2%; left:40%;"> 
+                    <div class="div_top" id="work_time" onclick="work_time()"><h5>(클릭)</h5></div>
+                    <div class="div_bottom">220</div>
+                </div>
+
+                <div id="shadow" style="top: 2.2%; bottom: 2.2%; right: 21%;">
+                    <div class="div_top" id="money" onclick="money()"><h5>(클릭)</h5></div>
+                    <div class="div_bottom">80</div>
+                </div>
+                <div id="shadow" style="top: 2.2%; bottom: 2.2%; right:2%;">
+                    <div class="div_top" id="employee" onclick="employee()"><h5>(클릭)</h5></div>
+                    <div class="div_bottom">3</div>
+                </div>
+            
+        </header>
+
+        <nav class="nav">
+
+            <div style="width: 100% height: 100%">
+                <div style="left: 2.2%; right: 2.2%;">
+                    <a href = "#work"><br>하는 일</a>
+                </div>
+                <div style="left: 2.2%; right: 2.2%; top: 24%">
+                    <a href = "#atmosphere"><br>근무 분위기</a>
+                </div>
+                <div style="left: 2.2%; right: 2.2%; top: 43%">
+                    <a href = "#like"><br>좋았던점</a>
+                </div>
+                <div style="left: 2.2%; right: 2.2%; top: 63%">
+                    <a href = "#hate"><br>싫었던점</a>
+                </div>
+                <div style="left: 2.2%; right: 2.2%; top: 83%">
+                    <a href = "#episode"><br>기억에 남는 에피소드</a>
+                </div>
+
+            </div>
+        </nav>
+
+        <section class="section">
+            <div class="scroll">
+                <ul>
+                <article id="work">
+                    <li>
+                        <p>
+                            <ul>
+                                <h2>하는 일</h2>
+                                <br>
+                                <li>발주 물품 체크</li>
+                                <li>손님응대</li>
+                                <li>디저트 및 음료 조리</li>
+                                <li>카페 인테리어 구상</li>
+                                <li>신메뉴 개발</li>
+                                <li>이벤트 구상</li>
+                                <li>직원 관리</li>
+                                <li>매출 관리</li>
+                            </ul>
+                        </p>
+                    </li>
+                </article>
+
+                <article id="atmosphere">
+                   <li>
+                        <p>
+                           <h2>근무 분위기</h2>
+                           <br>
+                            오픈 때부터 근무를 시작했는데, 오픈 때를 제외하고는 계속해서 매출도 떨어지고 손님도 많이 줄었기 때문에 한가한 근무환경이었다.
+                        </p>
+                  </li>
+                </article>
+
+                <article id="like">
+                    <li>
+                        <p>
+                            <h2>좋았던 점</h2>
+                            한가한 근무환경 덕에 메뉴개발이나 이벤트 구상 등의 매니저로써 여러가지 일을 경험해 볼 수 있었지만 너무 한가롭고 손님이 없어서 언제 문 닫을지 모르는 불안을 가지며 근무했다.
+                        </p>
+                   </li>
+                </article>
+
+                <article id="hate">
+                    <p>
+                        <h2>싫었던 점</h2>
+                        한가한 근무환경 덕에 메뉴개발이나 이벤트 구상 등의 매니저로써 여러가지 일을 경험해 볼 수 있었지만 너무 한가롭고 손님이 없어서 언제 문 닫을지 모르는 불안을 가지며 근무했다.
+                    </p>
+                </article>
+
+                <article id="episode">
+                    <li>
+                        <p>
+                            <h2>기억에 남는 에피소드</h2>
+                            고등학교 졸업도 하기 전에 했던 알바인데, 근무 첫 달에는 오픈빨로 손님이 줄 서서 주문할 정도로 많았다. 그때 한 남자 손님이 메뉴에 대해 여러가지 질문을 했는데 바쁜 탓에 친절하게 대답하지 못했다. 그때 '건방지네'라는 말을 들었는데 너무 화가 났지만 알바생이라는 이유로 아무 말도 하지 못했다. 처음으로 남에게 들은 큰 모욕이었다. 잊지 못할 첫 진상손님이었다.
+                        </p>
+                    </li>
+                </article>
+                </ul>
+            </div>
+        </section>
+</body>
+
+</html>

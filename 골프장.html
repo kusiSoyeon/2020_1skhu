@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html style="background-color: rgb(255,251,244);">
+
+<head>
+
+ <title> 골프장 </title>
+
+ <style>
+
+    html, body { margin: 0; padding: 0; height: 100%; }
+        .nav { width: 20%; height: 100%; float: left;}
+        .header { width: 80%; height: 30%; float:right; }
+        .section { width: 80%; height: 70%; float: right;}
+   body/*배경*/
+    {
+        border: 1.6em solid #E8DAB3;
+        border-radius: 50px;
+        background-image: url("media/줄공책바탕.jpg");
+     }
+
+     #shadow { box-shadow: 0px 0px 2px black; }
+     header div div
+     {
+       display: inline-block;
+       background-color: white;
+       margin: 2.2%;
+       width: 16%; height: 24%;
+       position: absolute;
+       text-align: center;
+       font-family: "MD이솝체", monospace;
+       font-size:1.2em;
+       color: black;
+       text-shadow: 1px 1px 2px rgb(48,43,0), 0px 0px 3px rgb(173,101,0);
+      
+     }
+
+     h5
+     {
+        text-align: center;
+        font-family: "MD이솝체", monospace;
+        font-size : 0.7em;
+        color: rgb(255,251,244);
+        text-shadow: 1px 1px 2px rgb(48,43,0), 0px 0px 3px rgb(173,101,0);
+     }
+
+     .div_top
+     {
+       display: inline-block;
+       background-color: rgb(255,251,244);
+       box-shadow: 0px 0px 1px black;
+       border: 1px dotted rgb(255, 249, 229);
+       width: 80%; height: 50%;
+       position: relative;
+       top: 15%;  
+     }
+
+     .div_bottom
+     {
+       display: inline-block;
+       width: 80%; height: 15%;
+       position: relative;
+       top: 20%;
+
+     }
+
+     /*카테고리 부분*/
+    nav div div
+     {
+        display: inline-block;
+        background: #E8DAB3;
+       border-radius: 50px;
+       border: 10px ridge rgb(255,251,244);
+       margin: 1%;
+       width: 16.5%; height: 10%;
+       position: absolute;
+       text-align: center;
+       font-family: "MD이솝체", monospace;
+       font-size:1.2em;
+       color: black;
+       text-shadow: 1px 1px 2px rgb(48,43,0), 0px 0px 3px rgb(173,101,0);
+     }
+
+       a:link
+        {
+            color: rgb(255,251,244);
+            text-shadow: 1px 1px black;
+            font: bold 1em "MD이솝체", monospace;
+            text-decoration: none;
+        }
+       a:hover
+        {
+            text-shadow: 0px 0px 5px black;
+            font: bold 1em "MD이솝체", monospace; 
+            text-decoration: underline;
+        }
+        a:visited
+        {
+            color: rgb(255,251,244);
+            text-shadow: 0px 0px 5px black;
+            font: bold 1em "MD이솝체", monospace; 
+            text-decoration: none;
+        }
+
+        .scroll
+        {
+            width: 93%; height: 90%;
+            margin: 2%;
+            border: 2px solid lightgray;
+            font: bold 1em monospace; 
+            overflow: scroll;
+        }
+
+        section p
+        {
+            margin: 4%;
+        }
+
+ </style>
+
+ <script>
+
+    function work_time() {
+    var h5 = document.getElementById("work_time");
+    h5.innerHTML="<br>한달 근무시간";
+    }
+
+    function money() {
+    var h5 = document.getElementById("money");
+    h5.innerHTML="<br>월급";
+    }
+
+    function employee() {
+    var h5 = document.getElementById("employee");
+    h5.innerHTML="<br>근무자수";
+    }
+
+
+ </script>
+
+</head>
+
+
+<body>
+
+        <header class="header">
+            
+            <div style="width: 100%; height: 100%;">
+
+                <div id="shadow" style="top: 2.2%; bottom: 2.2%; left:21%;">
+                    <image class="div_top" src="media/골프장.png"></image>
+                    <div class="div_bottom">골프장</div>
+                </div>
+
+                <div id="shadow" style="top: 2.2%; bottom: 2.2%; left:40%;"> 
+                    <div class="div_top" id="work_time" onclick="work_time()"><h5>(클릭)</h5></div>
+                    <div class="div_bottom">180</div>
+                </div>
+
+                <div id="shadow" style="top: 2.2%; bottom: 2.2%; right: 21%;">
+                    <div class="div_top" id="money" onclick="money()"><h5>(클릭)</h5></div>
+                    <div class="div_bottom">160</div>
+                </div>
+                <div id="shadow" style="top: 2.2%; bottom: 2.2%; right:2%;">
+                    <div class="div_top" id="employee" onclick="employee()"><h5>(클릭)</h5></div>
+                    <div class="div_bottom">1</div>
+                </div>
+            
+        </header>
+
+        <nav class="nav">
+
+            <div style="width: 100% height: 100%">
+                <div style="left: 2.2%; right: 2.2%;">
+                    <a href = "#work"><br>하는 일</a>
+                </div>
+                <div style="left: 2.2%; right: 2.2%; top: 24%">
+                    <a href = "#atmosphere"><br>근무 분위기</a>
+                </div>
+                <div style="left: 2.2%; right: 2.2%; top: 43%">
+                    <a href = "#like"><br>좋았던점</a>
+                </div>
+                <div style="left: 2.2%; right: 2.2%; top: 63%">
+                    <a href = "#hate"><br>싫었던점</a>
+                </div>
+                <div style="left: 2.2%; right: 2.2%; top: 83%">
+                    <a href = "#episode"><br>기억에 남는 에피소드</a>
+                </div>
+
+            </div>
+        </nav>
+
+        <section class="section">
+            <div class="scroll">
+                <ul>
+                <article id="work">
+                    <li>
+                        <p>
+                            <ul>
+                                <h2>하는 일</h2>
+                                <br>
+                                <li>고객응대<br></li>
+                                <li>청소<br></li>
+                                <li>회원권 안내</li>
+                                <li>연습 시간 넣어주기</li>
+                            </ul>
+                        </p>
+                    </li>
+                </article>
+
+                <article id="atmosphere">
+                   <li>
+                        <p>
+                           <h2>근무 분위기</h2>
+                           <br>
+                            조용~하고 좋음. 가~끔 진상 고객있는거 빼고!
+                        </p>
+                  </li>
+                </article>
+
+                <article id="like">
+                    <li>
+                        <p>
+                            <h2>좋았던 점</h2>
+                            안내 데스크에서 혼자 일하고 새벽이라서 고객들도 별로 안와서 적적하니 좋았다.
+                        </p>
+                   </li>
+                </article>
+
+                <article id="hate">
+                    <p>
+                        <h2>싫었던 점</h2>
+                        새벽 6시부터 2시까지 일했기 때문에 아침에 일어나기 너무 힘들었다.
+                    </p>
+                </article>
+
+                <article id="episode">
+                    <li>
+                        <p>
+                            <h2>기억에 남는 에피소드</h2>
+                            부부였는데 회원권 하나로 계속 같이 쓰다가 안된다고 하니까, 회원권 끊을 때 안내 못받았다고 고소하겠다고 난리친 50대 아줌마.. 돈 없으면 골프 못친다면서 돈 많으면 회원권 2개 끊지 좀..
+                        </p>
+                    </li>
+                </article>
+                </ul>
+            </div>
+        </section>
+</body>
+
+</html>
