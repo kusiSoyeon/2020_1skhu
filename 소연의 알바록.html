@@ -6,10 +6,10 @@
 	
 	<title>소연의 알바록</title>
 
-	<!-- CSS3 스타일 시트 -->
-	<style>
+	<!--------- CSS3 스타일 시트 ------------------>
 
-		/*문서 구조화*/
+	<!---------   구조화    ----------------------->
+	<style>
 		html, body { margin: 0; padding: 0; height: 100%; }
 		.header { width: 100%; height: 15%; }
 		.aside { width: 20%; height: 50%; float: left; }
@@ -17,20 +17,29 @@
 		.section { width: 60%; height: 90%; float: left; }
 		.article{width: 95%; height: 70%; float: left;}
 		.footer { width: 100%; height: 15%; clear : both;}
-
-		/* head 파트 */
-		header audio {width: 17%; float: left; padding: 0.6%;}/*오디오 크기조절*/
+	</style>	
 
 
-		/* nav 파트 */
-		nav table/*표의 형태 구축*/
+	<!---------   header    ----------------------->
+	<style>
+		/*오디오 크기조절*/
+		header audio {width: 17%; float: left; padding: 0.6%;}
+	</style>
+
+
+
+	<!---------   nav    ----------------------->
+	<style>
+		/*표 형태 잡기*/
+		nav table
 		{ 
 			width:40%; height: 90%; float: left;
 			border-collapse: collapse;
 			text-align: center;
 		}
 
-		nav table div/*카테고리 부분*/
+		/*알바명단 디자인*/
+		nav table div
 		{  
 			border-radius : 20px 20px 20px 0px;
 			border-style: solid;
@@ -38,47 +47,7 @@
 			background-color: #E8DAB3;/*베이지색*/
 		}
 
-		/*aside 파트*/
-		/*COMMENT HISTORY 부분*/
-		aside form {width: 18%; position: absolute;}
-		aside form fieldset { border-color: black; border-width: 1px; }
-
-
-		/* article 파트 */
-		/*공책배경 부분*/
-		article
-		{
-			border: 1.8em solid #E8DAB3;
-			border-radius: 20px;
-			background-image: url("media/줄공책바탕.jpg");
-		}
-
-		/* section 파트 */
-		section h1/*소연의 알바록 부분*/
-		{
-			text-align: center;
-			font-family: "MD이솝체", monospace;
-			font-size : 4.5em;
-			color: rgb(255,251,244);
-			text-shadow: 1px 1px 2px rgb(48,43,0), 0px 0px 5px rgb(173,101,0);
-		}
-
-		section h3/*날짜 부분*/
-		{
-			text-align: center;
-			font-family: "MD이솝체", monospace;
-			font-size : 2em;
-			color: rgb(255,251,244);
-			text-shadow: 1px 1px 2px rgb(48,43,0), 0px 0px 3px rgb(173,101,0);
-		}
-		section footer form fieldset/*COMMENT 부분*/
-		{ border-color: black; border-width: 1px; }
-
-		/* 기타 */
-		fieldset { font: bold 0.9em "MD이솝체", monospace;}
-		details summary { font-weight: 500;}
-
-		/*카테고리 앵커 방문 전/후 글씨체 셀렉터로 설정*/
+		/*다이어리 내부 방문 전,후 알바명단 디자인*/
 		a:link
 		{
 			color: rgb(255,251,244);
@@ -99,7 +68,71 @@
 			font: bold 1.1em "MD이솝체", monospace; 
 			text-decoration: none;
 		}
+	</style>
 
+
+	<!---------   aside    ----------------------->
+	<style>
+		/*COMMENT HISTORY*/
+		aside form {width: 18%; position: absolute;}
+		aside form fieldset { border-color: black; border-width: 1px; }
+		aside legend { font: bold 0.9em "MD이솝체", monospace;}
+		details {visibility: hidden;}
+		textarea
+		{ width :95%; font-family: "MD이솝체", monospace; border-width: 0px; background-color: rgb(255,251,244);
+			/*폰트 사이즈는 자바스크립트에서 설정함*/		
+		}
+		summary input[type=text] { width: 80%; font: 12px monospace; border-width: 0px; background-color: rgb(255,251,244);}
+	</style>
+
+
+	<!---------   공책배경    ----------------------->
+	<style>
+		/*공책 배경 디자인*/
+		article
+		{
+			border: 1.8em solid #E8DAB3;
+			border-radius: 20px;
+			background-image: url("media/줄공책바탕.jpg");
+		}
+	</style>
+
+
+	<!---------   article    ----------------------->
+	<style>
+
+		/*소연의 알바록*/
+		article h1
+		{
+			text-align: center;
+			font-family: "MD이솝체", monospace;
+			font-size : 4.5em;
+			color: rgb(255,251,244);
+			text-shadow: 1px 1px 2px rgb(48,43,0), 0px 0px 5px rgb(173,101,0);
+		}
+
+		/*알바기간*/
+		article h3
+		{
+			text-align: center;
+			font-family: "MD이솝체", monospace;
+			font-size : 2em;
+			color: rgb(255,251,244);
+			text-shadow: 1px 1px 2px rgb(48,43,0), 0px 0px 3px rgb(173,101,0);
+		}
+	</style>
+
+
+	<!---------   footer    ----------------------->
+	<style>
+		/*COMMENT*/
+		footer form fieldset { border-color: black; border-width: 1px; }
+		footer legend { font: bold 0.9em "MD이솝체", monospace;}
+		input[type=text]{ font : 14px monospace; }
+	</style>
+
+	<!---------   알바를 찾는다면    ----------------------->
+	<style>
 		.work_site
 		{
 			position: fixed;
@@ -112,13 +145,134 @@
 			text-shadow: 1px 1px 2px rgb(48,43,0), 0px 0px 3px rgb(173,101,0);
 
 		}
-
-
 	</style>
 
-	<!-- 자바 스크립트 -->
+</head>
+
+
+<body>
+	<!--알바 사이트로 바로 이동-->
+	<div class="work_site">
+		알바를 찾는다면
+	    <select id="search_work">
+	        <option value="https://www.albamon.com/" selected>알바몬</option>
+	        <option value="http://www.alba.co.kr/">알바천국</option>
+	    </select>
+	    <button onclick="search_work()">이동</button>
+	</div>
+
 	<script>
-	
+	function search_work()
+    {
+        var select = document.getElementById("search_work");
+        window.location = select.options[select.selectedIndex].value;
+    }
+    </script>
+
+	<!-- header: 배경음악 + 공간구성을 위한 여백의 역할-->
+	<header class="header">
+		<!-- 오디오 출처: 메이플 스토리 OST-에레브 수련의 숲 -->
+		<audio controls loop>
+			<source src="media/BGM.mp3" type="audio/mpeg">
+			<source src="media/BGM.ogg" type="audio/ogg">
+		</audio>
+	</header>
+
+	<!-- aside : COMMENT HISTORY -->
+	<aside class="aside">
+    	<form style="left:10px">
+			<fieldset>
+				<legend> COMMENT HISTORY </legend>
+				<div>
+					<details id="details">
+						<summary><input id="summary" type="text"></summary>
+							<textarea id="result_ex" cols="20" rows="10">
+							</textarea>
+					</details>
+				</div>
+			</fieldset>
+		</form>
+	</aside>
+
+	<script>
+		function move(){
+
+			var details = document.getElementById("details");
+			details.style.visibility = "visible";
+
+			var write = document.getElementById("write_ex");
+			var result_ex = document.getElementById("result_ex");
+			result_ex.value = write_ex.value;
+			result_ex.style.fontSize = "13px"; //summary부분 폰트 사이즈 설정
+			write_ex.value = "";
+
+			var date = new Date();
+			var summary = document.getElementById("summary");
+			summary.value = date.toLocaleString();
+		}
+
+	</script>
+
+	<!-- section 구성은 alticle + footer-->
+	<section class="section">
+
+		<!-- article : 다이어리 표지 -->
+		<article class="article">
+				<h1>
+					소연의 알바록<br><br>
+					<h3 id="date">&nbsp;</h3>
+				</h1>
+		</article>
+
+		<!-- footer : COMMENT -->
+		<footer class="footer">
+			<form>
+		        <fieldset>
+				    <legend>COMMENT</legend>
+				      	<input id="write_ex" type="text" style="width: 90%" placeholder="날짜와 함께 HISTORY에 기록됩니다." value="">
+				       	<input type="button" value="작성" onclick="move()">
+		        </fieldset>
+		    </form>
+		</footer>
+
+	</section>
+
+	<!-- nav : 알바명단 -->
+	<nav class="nav">
+	   <table>
+	   	<tbody>
+		    <tr><td><div>
+		    	<a href = "카페(최종).html" target="_blank" onmouseenter="date_cafe()" onmouseleave="date_nothing()"><br>카페</a>
+		    </div></td></tr>
+
+		    <tr><td><div>
+		    	<a href = "빵집.html" target="_blank" onmouseenter="date_bread()"  onmouseleave="date_nothing()"><br>빵집</a>
+		    </div></td></tr>
+
+		    <tr><td><div>
+		    	<a href = "방탈출.html" target="_blank" onmouseenter="date_escape()" onmouseleave="date_nothing()"><br>방탈출</a>
+		    </div></td></tr>
+
+		    <tr><td><div>
+		    	<a href = "골프장.html" target="_blank" onmouseenter="date_golf()" onmouseleave="date_nothing()"><br>골프장</a>
+		    </div></td></tr>
+
+		    <tr><td><div>
+		    	<a href = "승마장.html" target="_blank" onmouseenter="date_horse()" onmouseleave="date_nothing()"><br>승마장</a>
+		    </div></td></tr>
+
+		    <tr><td><div>
+		    	<a href = "텔레마케터.html" target="_blank" onmouseenter="date_phone()" onmouseleave="date_nothing()"><br>텔레마케터</a>
+		    </div></td></tr>
+
+		    <tr><td><div>
+		    	<a href = "대형마트.html" target="_blank" onmouseenter="date_mart()" onmouseleave="date_nothing()"><br>대형마트</a>
+		    </div></td></tr>
+	   	</tbody>
+	  </table>
+	</nav>
+
+	<script>
 	function date_nothing() {
 		var h3 = document.getElementById("date");
 		h3.innerHTML="&nbsp;";
@@ -159,135 +313,7 @@
 		var h3 = document.getElementById("date");
 		h3.innerHTML="2017년 10월(샴푸) / 2019년 4월(수입맥주)";
 	}
-
-    function search_work()
-    {
-        var select = document.getElementById("search_work");
-        window.location = select.options[select.selectedIndex].value;
-    }
-
 	</script>
-
-</head>
-
-
-<body>
-	<!--알바 사이트로 바로 이동-->
-	<div class="work_site">
-		알바를 찾는다면
-	    <select id="search_work">
-	        <option value="https://www.albamon.com/" selected>알바몬</option>
-	        <option value="http://www.alba.co.kr/">알바천국</option>
-	    </select>
-	    <button onclick="search_work()">이동</button>
-	</div>
-
-
-	<!-- header: 배경음악 + 공간구성을 위한 여백의 역할-->
-	<header class="header">
-		<audio controls loop>
-			<source src="media/BGM.mp3" type="audio/mpeg">
-			<source src="media/BGM.ogg" type="audio/ogg">
-			<!-- 오디오 출처: 메이플 스토리 OST-에레브 수련의 숲 -->	
-		</audio>
-	</header>
-
-	<!-- COMMENT HISTORY : 작성 버튼을 누르면 여기로 이동이 된다고 가정하고, 디자인만 보여드리려고 임의로 작성하였습니다.-->
-	<aside class="aside">
-		<form style="left:10px">
-			<fieldset>
-				<legend> COMMENT HISTORY </legend>
-				<div>
-					<details>
-						<summary>2016-01-24 오후 04 : 16</summary>
-						<p>새해가 시작된지 한 달이 다 되어가네... 20살의 이 시간에는 카페에서 일 했었구나.</p>
-					</details>
-					<details>
-						<summary>2017-06-11 오후 01 : 13</summary>
-						<p>이번주 과제가 6개... 알바를 하면 공부가 하고 싶고, 공부를 하면 알바가 하고싶고.. 뫼비우스의 띄가 따로 없네 ㅋㅋㅋㅋ</p>
-					</details>
-					<details>
-						<summary>2018-07-06 오전 11 : 22</summary>
-						<p>며칠전 동기들이랑 라오스 여행 다녀왔다가 감성에 젖어서 한번 더 들어왔다.. 지금은 알바 너무 많이해서 힘들다 ㅠㅠ</p>
-					</details>
-					<details>
-						<summary>2020-05-31 오후 11 : 34</summary>
-						<p>코로나때문에 알바 구하기 너무 힘들다던데... 그래도 내 경력이면 프리패스겠지...?</p>
-					</details>
-					<br><!--코멘트가 달릴 때마다 form의 공간이 늘어날 수 있음을 나타내려고 추가하였습니다.-->
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-				</div>
-			</fieldset>
-		</form>
-	</aside>
-
-	<!-- section 구성은 alticle + footer-->
-	<section class="section">
-
-		<!-- article : 다이어리 표지 -->
-		<article class="article">
-				<h1>
-					소연의 알바록<br><br>
-					<h3 id="date">&nbsp;</h3>
-				</h1>
-		</article>
-
-		<!-- footer는 COMMENT -->
-		<footer class="footer">
-			<form>
-        		<fieldset>
-		            <legend>COMMENT</legend>
-		            <input type="datetime-local" value="" style="width: 30%">
-		            <input style="width: 60%">
-		            <button>
-		                작성
-		            </button>
-        		</fieldset>
-    		</form>
-		</footer>
-
-	</section>
-
-	<nav class="nav">
-	   <table>
-	   	<tbody>
-		    <tr><td><div>
-		    	<a href = "카페(최종).html" target="_blank" onmouseenter="date_cafe()" onmouseleave="date_nothing()"><br>카페</a>
-		    </div></td></tr>
-
-		    <tr><td><div>
-		    	<a href = "빵집.html" target="_blank" onmouseenter="date_bread()"  onmouseleave="date_nothing()"><br>빵집</a>
-		    </div></td></tr>
-
-		    <tr><td><div>
-		    	<a href = "방탈출.html" target="_blank" onmouseenter="date_escape()" onmouseleave="date_nothing()"><br>방탈출</a>
-		    </div></td></tr>
-
-		    <tr><td><div>
-		    	<a href = "골프장.html" target="_blank" onmouseenter="date_golf()" onmouseleave="date_nothing()"><br>골프장</a>
-		    </div></td></tr>
-
-		    <tr><td><div>
-		    	<a href = "승마장.html" target="_blank" onmouseenter="date_horse()" onmouseleave="date_nothing()"><br>승마장</a>
-		    </div></td></tr>
-
-		    <tr><td><div>
-		    	<a href = "텔레마케터.html" target="_blank" onmouseenter="date_phone()" onmouseleave="date_nothing()"><br>텔레마케터</a>
-		    </div></td></tr>
-
-		    <tr><td><div>
-		    	<a href = "대형마트.html" target="_blank" onmouseenter="date_mart()" onmouseleave="date_nothing()"><br>대형마트</a>
-		    </div></td></tr>
-
-	   	</tbody>
-	  </table>
-	</nav>
 </body>
 </html>
 <!-- 이미지 출처목록
